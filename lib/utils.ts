@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function formatNumber(value) {
+export function formatNumber(value: number) {
   // Check if the value is a number
   if (typeof value!== 'number') {
     throw new TypeError('Expected a number');
@@ -23,10 +23,21 @@ export function formatNumber(value) {
   return formattedValue;
 }
 
-export function formatWholeNumberWithCommas(number) {
+export function formatWholeNumberWithCommas(number: number) {
   // Remove decimal part
   const wholeNumber = Math.floor(number);
 
   // Convert the number to a string and add commas as thousands separators
   return wholeNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+export function firstTwoLower(str: string) {
+  // Check if the string is not empty and has at least two characters
+  if (str && str.length >= 2) {
+    // Get the first two characters and convert them to lowercase
+    return str.slice(0, 2).toLowerCase();
+  }
+  // If the string is empty or shorter than two characters, return an empty string
+  return '';
+}
+
