@@ -47,7 +47,7 @@ const Nav = () => {
               className={clsx(
                 " text-muted-foreground transition-colors hover:text-foreground",
                 {
-                  "text-black transition-colors hover:text-foreground":
+                  "bg-gray-100 p-2 rounded-md text-foreground transition-colors hover:text-foreground":
                     pathname === link.href,
                 }
               )}
@@ -74,7 +74,7 @@ const Nav = () => {
                   className={clsx(
                     " text-muted-foreground transition-colors hover:text-foreground",
                     {
-                      "text-black transition-colors hover:text-foreground":
+                      "bg-gray-100 p-2 rounded-md text-foreground text-black transition-colors hover:text-foreground":
                         pathname === link.href,
                     }
                   )}
