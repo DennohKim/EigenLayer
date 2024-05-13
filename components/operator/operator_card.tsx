@@ -43,16 +43,32 @@ const OperatorCard = ({ data }: Operators) => {
           <CardDescription>{data?.metadataDescription}</CardDescription>
 
           <div className="flex space-x-10 items-center py-4">
-          <a href={data?.metadataWebsite} target="_blank" className="hover:text-gray-500">
+            <a
+              href={data?.metadataWebsite}
+              target="_blank"
+              className="hover:text-gray-500"
+            >
               <Globe size={20} />
             </a>
-            <a href={data?.metadataX} target="_blank" className="hover:text-gray-500">
+            <a
+              href={data?.metadataX}
+              target="_blank"
+              className="hover:text-gray-500"
+            >
               <X size={20} />
             </a>
-            <a href={data?.metadataTelegram} target="_blank" className="hover:text-gray-500">
+            <a
+              href={data?.metadataTelegram}
+              target="_blank"
+              className="hover:text-gray-500"
+            >
               <TbBrandTelegram size={20} />
             </a>
-            <a href={data?.metadataDiscord} target="_blank" className="hover:text-gray-500">
+            <a
+              href={data?.metadataDiscord}
+              target="_blank"
+              className="hover:text-gray-500"
+            >
               <RiDiscordLine size={20} />
             </a>
           </div>
@@ -62,14 +78,13 @@ const OperatorCard = ({ data }: Operators) => {
         <CardContent>
           <div>
             <div className="flex flex-col ">
-            <p className="text-smx">Total Stakers</p>
+              <p className="text-smx">Total Stakers</p>
 
-            <p className="font-semibold">{data?.totalStakers}</p>
+              <p className="font-semibold text-2xl">{data?.totalStakers}</p>
             </div>
-            
           </div>
-          <Separator className="my-3"/>
-<p className="text-md font-semibold">Shares</p>
+          <Separator className="my-3" />
+          <p className="text-md font-semibold">Shares</p>
           <Table>
             <TableHeader>
               <TableRow>

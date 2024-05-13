@@ -78,12 +78,12 @@ const AvsCard = ( { data } : Avs) => {
             <div className="flex flex-col ">
               <p className="text-sm">Total Stakers</p>
 
-              <p className="font-semibold">{data?.totalStakers}</p>
+              <p className="font-semibold text-xl">{data?.totalStakers}</p>
             </div>
             <div className="flex flex-col ">
               <p className="text-sm">Total Operators</p>
 
-              <p className="font-semibold">{data?.totalOperators}</p>
+              <p className="font-semibold text-xl">{data?.totalOperators}</p>
             </div>
           </div>
           <Separator className="my-3" />
