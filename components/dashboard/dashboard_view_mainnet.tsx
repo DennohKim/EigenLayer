@@ -34,17 +34,21 @@ import { formatNumber, formatWholeNumberWithCommas, firstTwoLower } from "@/lib/
 import { Badge } from "@/components/ui/badge";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { iOperators } from "@/types/types";
 
 interface DashboardViewProps {
-  tvl: number;
+  data: {
+    tvl: number;
   tvlRestaking: number;
   tvlStrategies: { [strategy: string]: number };
   tvlBeaconChain: number;
   totalAvs: number;
   totalOperators: number;
   totalStakers: number;
+  }
 }
-const DashboardView = ({ data }: DashboardViewProps) => {
+
+const DashboardViewMainnet = ({ data }: DashboardViewProps) => {
   console.log("data", data);
 
   return (
@@ -129,7 +133,7 @@ const DashboardView = ({ data }: DashboardViewProps) => {
           </CardContent>
         </Card>
       </div>
-      <div className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3 pt-8">
         <Card x-chunk="dashboard-01-chunk-5">
           <CardHeader>
             <CardTitle>TVL Strategies</CardTitle>
@@ -160,4 +164,4 @@ const DashboardView = ({ data }: DashboardViewProps) => {
   );
 };
 
-export default DashboardView;
+export default DashboardViewMainnet;
